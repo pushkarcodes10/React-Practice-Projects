@@ -2,7 +2,7 @@
 
 This repository contains interactive, responsive React web applications built to practice core React concepts, hooks, state management, and modern styling.
 
-Both projects are bootstrapped using **Vite** and styled with **Tailwind CSS v4**.
+All projects are bootstrapped using **Vite** and styled with **Tailwind CSS v4**.
 
 ---
 
@@ -45,9 +45,27 @@ A password generation utility with customization parameters.
 
 ---
 
+### 3. [💱 Currency Converter](./Currency%20Converter)
+A real-time currency conversion tool fetching live exchange rates.
+- **Features**:
+  - Fetches real-time exchange rates via a public currency API.
+  - Swappable input values and currencies.
+  - Dropdown options dynamically populated from the API.
+  - Glassmorphic UI container with background blur.
+- **React Implementation**:
+  - Uses a custom React Hook (`useCurrencyInfo`) to handle currency data fetching with `useEffect` and dependency tracking.
+  - Employs reusable UI components (`InputBox`) using the `useId` hook for accessible input bindings.
+  - Communicates changes back to the parent component using state handlers.
+- **Key Files**:
+  - [App.jsx](./Currency%20Converter/src/App.jsx) (Main converter layout, swap, and convert operations)
+  - [InputBox.jsx](./Currency%20Converter/src/components/InputBox.jsx) (Reusable input selection component)
+  - [useCurrencyInfo.js](./Currency%20Converter/src/hooks/useCurrencyInfo.js) (Custom data fetch hook)
+
+---
+
 ## 🚀 Getting Started
 
-To run either project locally, navigate to its directory, install dependencies, and run the Vite dev server.
+To run any project locally, navigate to its directory, install dependencies, and run the Vite dev server.
 
 ### 1. Choose & Navigate to a Project
 For the **BG-Changer**:
@@ -57,6 +75,10 @@ cd BG-Changer
 For the **Password Generator**:
 ```bash
 cd "Password Generator"
+```
+For the **Currency Converter**:
+```bash
+cd "Currency Converter"
 ```
 
 ### 2. Install Dependencies
