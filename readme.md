@@ -63,6 +63,27 @@ A real-time currency conversion tool fetching live exchange rates.
 
 ---
 
+### 4. [🛣️ React Router](./reactRouter)
+A multi-page React application demonstrating advanced SPA client-side routing concepts and optimization.
+- **Features**:
+  - Dynamic client-side navigation using a sticky Header layout.
+  - Profile card displaying fetched live data from the GitHub API.
+  - Dynamically resolved routing paths showing dynamic route values (e.g., custom user ID).
+- **React Implementation**:
+  - Employs `createBrowserRouter` and `createRoutesFromElements` to define clear routing structures.
+  - Employs layout nesting with `<Header />`, `<Outlet />`, and `<Footer />` components.
+  - Implements custom `loader` API in React Router (`githubInfoLoader`) to fetch profile data in parallel during route transitions, caching it with `useLoaderData` to improve performance.
+  - Uses `useParams` hook to handle dynamic URL query routing values.
+  - Leverages custom `NavLink` isActive states to highlight the active menu item dynamically.
+- **Key Files**:
+  - [main.jsx](./reactRouter/src/main.jsx) (Router tree definition and initialization)
+  - [Layout.jsx](./reactRouter/src/Layout.jsx) (Parent container defining standard page structure using Outlet)
+  - [User.jsx](./reactRouter/src/components/User/User.jsx) (Demonstrates dynamic param routing)
+  - [Github.jsx](./reactRouter/src/components/Github/Github.jsx) (Optimized loader data fetching implementation)
+
+
+---
+
 ## 🚀 Getting Started
 
 To run any project locally, navigate to its directory, install dependencies, and run the Vite dev server.
@@ -79,6 +100,10 @@ cd "Password Generator"
 For the **Currency Converter**:
 ```bash
 cd "Currency Converter"
+```
+For the **React Router**:
+```bash
+cd reactRouter
 ```
 
 ### 2. Install Dependencies
