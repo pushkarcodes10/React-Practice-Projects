@@ -81,6 +81,23 @@ A multi-page React application demonstrating advanced SPA client-side routing co
   - [User.jsx](./reactRouter/src/components/User/User.jsx) (Demonstrates dynamic param routing)
   - [Github.jsx](./reactRouter/src/components/Github/Github.jsx) (Optimized loader data fetching implementation)
 
+---
+
+### 5. [🌐 Mini Context](./mini-context)
+A simple application demonstrating React's built-in Context API for global state management.
+- **Features**:
+  - Global state sharing without prop drilling.
+  - Interactive Login form that updates global credentials.
+  - Profile view component displaying credentials conditionally from the context.
+- **React Implementation**:
+  - Employs `React.createContext()` to initialize the shared state context.
+  - Implements a custom context provider wrapper (`UserContextProvider`) exposing state values and modifiers.
+  - Uses `useContext` hook inside child components (`Login` and `Profile`) to consume context state.
+- **Key Files**:
+  - [UserContext.js](./mini-context/src/context/UserContext.js) (Context setup)
+  - [UserContextProvider.jsx](./mini-context/src/context/UserContextProvider.jsx) (Provider definition)
+  - [Login.jsx](./mini-context/src/components/Login.jsx) (Context consumer to update state)
+  - [Profile.jsx](./mini-context/src/components/Profile.jsx) (Context consumer to render state)
 
 ---
 
@@ -104,6 +121,10 @@ cd "Currency Converter"
 For the **React Router**:
 ```bash
 cd reactRouter
+```
+For the **Mini Context**:
+```bash
+cd mini-context
 ```
 
 ### 2. Install Dependencies
