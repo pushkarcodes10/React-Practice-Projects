@@ -101,6 +101,23 @@ A simple application demonstrating React's built-in Context API for global state
 
 ---
 
+### 6. [🌗 Theme Switcher](./themeSwitcher)
+A React application demonstrating global light/dark theme toggling with custom context providers and Tailwind CSS v4 class-based variant switching.
+- **Features**:
+  - Toggle button with animated state changes.
+  - Beautiful product showcase card dynamically adapting backgrounds, borders, shadows, and text colors.
+- **React Implementation**:
+  - Configures global `ThemeContext` context and a matching custom `useTheme` hook wrapper.
+  - Uses standard dynamic `html` element node manipulation triggered inside a `useEffect` layout sync hook.
+  - Leverages `@custom-variant dark (&:where(.dark, .dark *))` defined inside Tailwind CSS v4's [index.css](./themeSwitcher/src/index.css).
+- **Key Files**:
+  - [theme.js](./themeSwitcher/src/contexts/theme.js) (Theme Context definition)
+  - [App.jsx](./themeSwitcher/src/App.jsx) (Theme wrapper and root side effects)
+  - [ThemeBtn.jsx](./themeSwitcher/src/components/ThemeBtn.jsx) (Animated toggler button)
+  - [Card.jsx](./themeSwitcher/src/components/Card.jsx) (Dynamic product layout card)
+
+---
+
 ## 🚀 Getting Started
 
 To run any project locally, navigate to its directory, install dependencies, and run the Vite dev server.
@@ -125,6 +142,10 @@ cd reactRouter
 For the **Mini Context**:
 ```bash
 cd mini-context
+```
+For the **Theme Switcher**:
+```bash
+cd themeSwitcher
 ```
 
 ### 2. Install Dependencies
