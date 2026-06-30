@@ -118,6 +118,24 @@ A React application demonstrating global light/dark theme toggling with custom c
 
 ---
 
+### 7. [📝 Todo Manager](./todoContextLocalStorage)
+A comprehensive task management application that saves items to the browser's LocalStorage.
+- **Features**:
+  - Inline task editing, completion checking, and item deletion.
+  - Persistent storage across sessions.
+  - Responsive design with status-based dynamic coloring.
+- **React Implementation**:
+  - Exposes state variables and methods (`addTodo`, `updateTodo`, `deleteTodo`, `toggleComplete`) through a central `TodoProvider` context.
+  - Employs double `useEffect` blocks: one to read initial list data on component mount, and another to write data automatically whenever state updates.
+  - Uses local state inside component items to toggle read-only status and save modified titles.
+- **Key Files**:
+  - [App.jsx](./todoContextLocalStorage/src/App.jsx) (State house, LocalStorage triggers, and layouts)
+  - [TodoContext.js](./todoContextLocalStorage/src/contexts/TodoContext.js) (Unified context definition and custom hook helper)
+  - [TodoForm.jsx](./todoContextLocalStorage/src/components/TodoForm.jsx) (Input submission form)
+  - [TodoItem.jsx](./todoContextLocalStorage/src/components/TodoItem.jsx) (Editable list item element)
+
+---
+
 ## 🚀 Getting Started
 
 To run any project locally, navigate to its directory, install dependencies, and run the Vite dev server.
@@ -147,6 +165,11 @@ For the **Theme Switcher**:
 ```bash
 cd themeSwitcher
 ```
+For the **Todo Manager**:
+```bash
+cd todoContextLocalStorage
+```
+
 
 ### 2. Install Dependencies
 ```bash
